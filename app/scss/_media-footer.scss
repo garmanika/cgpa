@@ -17,6 +17,9 @@
     .footer-links{
         order: 1;
     }
+		.page-inner{
+			padding-bottom: 60px;
+		}
 }
 @media (min-width: 992px){
     .footer-icons-inner{
@@ -35,6 +38,9 @@
     .footer{
         padding: 43px 0 43px;
     }
+		.page-inner{
+			padding-bottom: 100px;
+		}
 }
 @media (min-width: 1200px){
 

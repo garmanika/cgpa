@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />-->
+    <link rel="stylesheet" href="css/bootstrap-grid.css" /> 
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <div class="page-bg"></div>
+    <div class="wrapper-page">
+      <div class="content">
+        <header class="header sticky">
+          <div class="header-wrapper">
+            <div class="header-top">
+              <div class="container">
+                <div class="header-top-inner">
+                  <div class="header-box">
+                    <a href="#" class="header-logo">ЦГПА</a>
+                    <div class="header-logo-descr">
+                      центр геопространственной аналитики
+                    </div>
+                  </div>
+                  <div class="header-box">
+                    <div class="header-logo-icons">
+                      <a href="#" class="header-logo-icon">
+                        <img
+                          src="img/svg/roscosmos-logo.svg"
+                          alt="roscosmos-logo"
+                        />
+                      </a>
+                      <a href="#" class="header-logo-icon">
+                        <img src="img/terratech.png" alt="terratech-logo" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-bottom">
+              <div class="container">
+                <div class="header-bottom-inner">
+                  <nav class="header-bottom-nav">
+                    <button class="menu-btn">
+                      <span class="menu-btn-top"></span>
+                      <span class="menu-btn-medium"></span>
+                      <span class="menu-btn-bottom"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.53033 17.9047C5.23744 17.6118 5.23744 17.137 5.53033 16.8441L16.844 5.53034C17.1369 5.23745 17.6118 5.23745 17.9047 5.53034C18.1976 5.82323 18.1976 6.29811 17.9047 6.591L6.59099 17.9047C6.2981 18.1976 5.82322 18.1976 5.53033 17.9047Z"
+                          fill="black"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.53022 5.53033C5.82311 5.23744 6.29798 5.23744 6.59088 5.53033L17.9046 16.844C18.1975 17.1369 18.1975 17.6118 17.9046 17.9047C17.6117 18.1976 17.1368 18.1976 16.8439 17.9047L5.53022 6.59099C5.23732 6.2981 5.23732 5.82322 5.53022 5.53033Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </button>
+                    <div class="header-menu">
+                      <div class="mobile-navigation-box">
+                        <ul class="mobile-navigation-menu">
+                          <li>
+                            <a href="#" class="active">
+                              <span> Главная </span>
+                            </a>
+                          </li>
+                          <li class="is-parent">
+                            <a href="#"><span>Категории</span> </a>
+                            <!-- <div class="mobile-navigation-sub-position">
+                            <a href="#" class="mobile-navigation-sub-menu-heading">
+                              <span class="mobile-navigation-sub-menu-heading-title">Проекты</span>
+                            </a>
+                            <ul class="mobile-navigation-sub-menu">
+                              <li class="is-parent">
+                                <a href="#">
+                                  <span> Русский росток </span>
+                                </a>
+                                <div class="mobile-navigation-sub-position">
+                                  <a href="#" class="mobile-navigation-sub-menu-heading">
+                                    <span class="mobile-navigation-sub-menu-heading-title">Русский росток</span>
+
+                                  </a>
+                                  <ul class="mobile-navigation-sub-menu">
+                                    <li class="is-parent">
+                                      <a href="#">
+                                        <span> Кружки </span>
+                                      </a>
+                                      <div class="mobile-navigation-sub-position">
+                                        <a href="#" class="mobile-navigation-sub-menu-heading">
+                                          <span class="mobile-navigation-sub-menu-heading-title">
+                                            Кружки
+                                          </span>
+                                        </a>
+                                        <ul class="mobile-navigation-sub-menu">
+                                          <li>
+                                            <a
+                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
+                                              <span> Посуда для детей </span>
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a
+                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
+                                              <span> Посуда для детей </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/benzopily/">
+                                        <span> Посуда </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/motobloki/">
+                                        <span> Посуда </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/motobury/">
+                                        <span> Посуда для детей </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span> Посуда </span></a>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span> Посуда </span></a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span> Аим </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span> Международный аэропорт Калуга </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span> Пандора </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span> Коралл </span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div> -->
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span> Список отчетов </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span> О проекте </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="page-inner">
+          <div class="container">
+            <section class="report">
+              <div class="img-vw">
+                <img src="img/img-vw.jpg" alt="" />
+              </div>
+              <div class="report-item">
+                <div class="report-item-title">
+                  <div class="report-item-title-date">10.08.2020</div>
+                  <div class="report-item-title-tags">
+                    <a href="#" class="report-item-title-tag">#Недра</a>
+                    <a href="#" class="report-item-title-tag">#Мониторинг</a>
+                    <a href="#" class="report-item-title-tag">#ЧС</a>
+                  </div>
+                </div>
+                <div class="report-item-content">
+                  <h1>Карьеры</h1>
+                  <h2>
+                    Исходная ситуация - соблюдение правил недропользования и
+                    незаконные карьеры.
+                  </h2>
+                  <h3>Задачи</h3>
+                  <ul>
+                    <li>Выявление незаконных карьеров</li>
+                    <li>
+                      Установление нарушений лицензионных соглашений для
+                      разрешенных карьеров
+                    </li>
+                  </ul>
+                  <h2>Тематическая карта количества нелегитимных карьеров</h2>
+                  <iframe
+                    src="https://datalens.yandex/u07m0f67epx6n?b76344a2-2cc1-4f65-bb40-f81035853bf2=&45bdfbb6-1dd9-41bd-9871-b011efd8ec6b=&3dcc4a70-e1f0-11e9-a279-0b30c0a74ab7=__interval___relative_-3y___relative_-0d"
+                    width="100%"
+                    height="586"
+                    frameborder="0"
+                  ></iframe>
+                  <div class="report-item-content-box">
+                    <ol>
+                      <li>Молоковский район</li>
+                      <li>Нелидовский городской округ</li>
+                      <li>Вышневолоцкий район</li>
+                      <li>городской округ Вышний Волочёк</li>
+                      <li>Весьегонский район</li>
+                      <li>городской округ Тверь</li>
+                      <li>Удомельский городской округ</li>
+                      <li>Торопецкий район</li>
+                      <li>Торжокский район</li>
+                      <li>Сонкоеский район</li>
+                      <li>Молоковский район</li>
+                      <li>Нелидовский городской округ</li>
+                      <li>Вышневолоцкий район</li>
+                      <li>городской округ Вышний Волочёк</li>
+                      <li>Весьегонский район</li>
+                      <li>городской округ Тверь</li>
+                      <li>Удомельский городской округ</li>
+                      <li>Торопецкий район</li>
+                      <li>Торжокский район</li>
+                      <li>Сонкоеский район</li>
+                    </ol>
+                    <ol>
+                      <li>Молоковский район</li>
+                      <li>Нелидовский городской округ</li>
+                      <li>Вышневолоцкий район</li>
+                      <li>городской округ Вышний Волочёк</li>
+                      <li>Весьегонский район</li>
+                      <li>городской округ Тверь</li>
+                      <li>Удомельский городской округ</li>
+                      <li>Торопецкий район</li>
+                      <li>Торжокский район</li>
+                      <li>Сонкоеский район</li>
+                      <li>Молоковский район</li>
+                      <li>Нелидовский городской округ</li>
+                      <li>Вышневолоцкий район</li>
+                      <li>городской округ Вышний Волочёк</li>
+                      <li>Весьегонский район</li>
+                      <li>городской округ Тверь</li>
+                    </ol>
+                  </div>
+                  <h2>Количество нелегитимных карьеров</h2>
+                  <iframe
+                    src="https://datalens.yandex/jpw2j4kthlo8c?b76344a2-2cc1-4f65-bb40-f81035853bf2=&45bdfbb6-1dd9-41bd-9871-b011efd8ec6b=&3dcc4a70-e1f0-11e9-a279-0b30c0a74ab7=__interval___relative_-3y___relative_-0d"
+                    width="100%"
+                    height="404"
+                    frameborder="0"
+                  ></iframe>
+                  <h2>Отчет по нелегитимным карьерам</h2>
+                  <div class="responsive-table">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Район</th>
+                          <th>Количество нелегитимных карьеров, шт</th>
+                          <th>Площадь нелегитимных карьеров, га</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Молоковский район</td>
+                          <td>1.0</td>
+                          <td>1.8</td>
+                        </tr>
+                        <tr>
+                          <td>Нелидовский городской округ</td>
+                          <td>8.0</td>
+                          <td>29.7</td>
+                        </tr>
+                        <tr>
+                          <td>Вышневолоцкий район</td>
+                          <td>14.0</td>
+                          <td>129.4</td>
+                        </tr>
+                        <tr>
+                          <td>городской округ Вышний Волочёк</td>
+                          <td>—</td>
+                          <td>—</td>
+                        </tr>
+                        <tr>
+                          <td>Весьегонский район</td>
+                          <td>1.0</td>
+                          <td>4.0</td>
+                        </tr>
+                        <tr>
+                          <td>Удомельский городской округ</td>
+                          <td>—</td>
+                          <td>—</td>
+                        </tr>
+                        <tr>
+                          <td>Торопецкий район</td>
+                          <td>4.0</td>
+                          <td>24.2</td>
+                        </tr>
+                        <tr>
+                          <td>Торжокский район</td>
+                          <td>1.0</td>
+                          <td>3.1</td>
+                        </tr>
+                        <tr>
+                          <td>Сонкоеский район</td>
+                          <td>12.0</td>
+                          <td>156.5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h2>Отчет по нелегитимным карьерам</h2>
+                  <iframe
+                    src="https://datalens.yandex/s1a3q0xydnw6l?b76344a2-2cc1-4f65-bb40-f81035853bf2=&45bdfbb6-1dd9-41bd-9871-b011efd8ec6b=&3dcc4a70-e1f0-11e9-a279-0b30c0a74ab7=__interval___relative_-3y___relative_-0d"
+                    width="100%"
+                    height="401"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <div class="report-item-download">
+                  <button>Скачать отчет</button>
+                </div>
+              </div>
+              <div class="report-pagination">
+                <a href="#">Вернуться назад</a>
+              </div>
+              <div class="subscription">
+                <div class="subscription-wrapper">
+                  <div class="subscription-title">
+                    Хотите быть в курсе актуальной информации?
+                  </div>
+                  <div class="subscription-control">
+                    <div class="subscription-control-email">
+                      <input type="email" placeholder="E-mail" />
+                      <button>подписаться</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="subscription-message">
+                  Вы успешно подписались на нашу рассылку!
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-links">
+              <div class="footer-link-box footer-link-tels">
+                <a href="tel:+ 74957455957" class="footer-link"
+                  >+ 7 (495) 745-59-57</a
+                >
+              </div>
+              <div class="footer-link-box footer-link-mails">
+                <a href="mailto:info@terratech.ru">info@terratech.ru</a>
+              </div>
+            </div>
+
+            <div class="footer-icons-inner">
+              <a href="#" class="footer-icon">
+                <img src="img/svg/roscosmos-logo.svg" alt="" />
+              </a>
+              <a href="#" class="footer-icon">
+                <img src="img/terratech.png" alt="" />
+              </a>
+              <div class="footer-icon-info">
+                Организация Госкорпорации «Роскосмос»
+              </div>
+            </div>
+            <div class="footer-info">© АО «ТЕРРА ТЕХ», 2022</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script src="js/svg4everybody.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.inputmask.js"></script> -->
+    <!-- <script src="js/dynamicAdapt.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

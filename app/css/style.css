@@ -243,7 +243,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tags-items-inner {
   max-height: 82px;
   overflow: hidden;
-  margin-bottom: 12px
+  margin-bottom: 12px;
+  display: inline-block
 }
 .tags-items {
   display: inline-flex;
@@ -251,17 +252,16 @@ input[type=number]::-webkit-outer-spin-button {
   flex-wrap: wrap
 }
 .tags-item {
-  padding: 8px 16px;
   background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.21;
-  color: #768ba7;
-  border: 1px solid #ddd
+  color: #768ba7
 }
-.tags-item.active,
-.tags-item:focus,
-.tags-item:hover {
+.tags-item.active {
   background: #768ba7;
   color: #fff
 }
@@ -277,7 +277,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: none
 }
 .tags-all.show {
-  display: block
+  display: inline-block
 }
 .filled .tags-all-show,
 .tags-all-hide {
@@ -383,7 +383,7 @@ ul.location-item-info-list li {
   padding-left: 22px
 }
 ul.location-item-info-list li + li {
-  margin-top: 10px
+  margin-top: 8px
 }
 ul.location-item-info-list li::before {
   position: absolute;
@@ -423,7 +423,8 @@ ul.location-item-info-tags a {
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
-  color: #0246a4
+  color: #0246a4;
+  width: 100%
 }
 @media (min-width:576px) {
   .location-item {
@@ -436,6 +437,9 @@ ul.location-item-info-tags a {
   }
   .location-item-info-date {
     margin-bottom: 30px
+  }
+  .location-control-more {
+    width: 350px
   }
 }
 @media (min-width:768px) {
@@ -474,12 +478,16 @@ ul.location-item-info-tags a {
   }
 }
 .subscription {
-  margin-bottom: 40px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(180,180,180,.2)
+  margin-bottom: 40px
 }
 .subscription-wrapper {
-  padding: 25px 0 30px
+  padding: 25px 15px 30px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(180,180,180,.2);
+  margin: 0 -15px
+}
+.subscription-wrapper.fill {
+  display: none
 }
 .subscription-title {
   font-weight: 500;
@@ -515,18 +523,31 @@ ul.location-item-info-tags a {
   text-transform: uppercase;
   color: #fff
 }
+.subscription-message {
+  display: none;
+  padding: 25px 15px 30px;
+  margin: 0 -15px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(180,180,180,.2);
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #0246a4;
+  text-align: center
+}
+.subscription-message.active {
+  display: flex
+}
 @media (min-width:576px) {
+  .subscription-message,
   .subscription-wrapper {
     padding-left: 25px;
     padding-right: 25px;
-    box-shadow: 0 2px 4px rgba(180,180,180,.2)
-  }
-  .subscription {
-    background-color: transparent;
-    box-shadow: none
-  }
-  .subscription-wrapper {
-    background-color: #fff
+    box-shadow: 0 2px 4px rgba(180,180,180,.2);
+    margin-left: 0;
+    margin-right: 0
   }
 }
 @media (min-width:768px) {
@@ -537,6 +558,7 @@ ul.location-item-info-tags a {
   .subscription-title {
     margin-bottom: 17px
   }
+  .subscription-message,
   .subscription-wrapper {
     padding: 25px
   }
@@ -550,11 +572,17 @@ ul.location-item-info-tags a {
     display: grid;
     grid-template-columns: minmax(auto,350px) 1fr;
     align-items: center;
-    gap: 16px;
-    padding: 35px 30px 44px
+    gap: 16px
   }
   .subscription-title {
     margin-bottom: 0
+  }
+  .subscription-message,
+  .subscription-wrapper {
+    padding: 35px 30px 44px
+  }
+  .subscription {
+    margin-bottom: 80px
   }
 }
 @media (min-width:1200px) {
@@ -563,7 +591,14 @@ ul.location-item-info-tags a {
     gap: 16px
   }
   .subscription-wrapper {
-    grid-template-columns: auto minmax(auto,518px)
+    grid-template-columns: auto minmax(auto,518px);
+    padding: 42px 32px 49px
+  }
+  .subscription-message {
+    padding: 50px 30px 60px
+  }
+  .subscription {
+    margin-bottom: 60px
   }
 }
 .footer {
@@ -650,6 +685,10 @@ ul.location-item-info-tags a {
   line-height: 121%;
   color: #706f6f
 }
+.page-inner {
+  margin-top: 60px;
+  padding-bottom: 40px
+}
 @media (min-width:768px) {
   .footer {
     padding: 40px 0 20px
@@ -665,6 +704,9 @@ ul.location-item-info-tags a {
   }
   .footer-links {
     order: 1
+  }
+  .page-inner {
+    padding-bottom: 60px
   }
 }
 @media (min-width:992px) {
@@ -683,5 +725,318 @@ ul.location-item-info-tags a {
   }
   .footer {
     padding: 43px 0
+  }
+  .page-inner {
+    padding-bottom: 100px
+  }
+}
+.report .img-vw {
+  margin: 40px 0
+}
+.report .img-vw img {
+  display: block;
+  max-width: 100%
+}
+.report :first-child {
+  margin-top: 0
+}
+.report :last-child {
+  margin-bottom: 0
+}
+.report-item {
+  padding: 25px 15px;
+  background: #fff;
+  margin: 0 -15px 34px
+}
+.report-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 15px;
+  flex-wrap: wrap
+}
+.report-item-title-date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000
+}
+.report-item-title-tags {
+  display: flex;
+  gap: 0 10px
+}
+.report-item-title-tag {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #0246a4
+}
+.report-item-content {
+  margin-bottom: 40px
+}
+.report-item-content h1 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 121%;
+  margin: 0 0 24px;
+  color: #000
+}
+.report-item-content h2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0 0 28px;
+  color: #000
+}
+.report-item-content h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin: 0 0 8px
+}
+.report-item-content ul {
+  margin-bottom: 50px
+}
+.report-item-content ul li {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  padding-left: 22px
+}
+.report-item-content ul li + li {
+  margin-top: 8px
+}
+.report-item-content ul li::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 9px;
+  left: 8px
+}
+.report-item-content iframe {
+  display: block;
+  margin: 10px 0 40px
+}
+.report-item-content .report-item-content-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,290px);
+  gap: 15px 30px;
+  margin: 40px 0 60px
+}
+.report-item-content .report-item-content-box ol > li {
+  counter-increment: step-counter
+}
+.report-item-content .report-item-content-box ol > li::before {
+  content: counter(step-counter) "."
+}
+.report-item-content .report-item-content-box ol li::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000
+}
+.report-item-content .report-item-content-box ol li {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  padding-left: 24px
+}
+.report-item-content .responsive-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 60px
+}
+.report-item-content .responsive-table table {
+  width: 100%;
+  border-collapse: collapse
+}
+.report-item-content .responsive-table thead tr {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd
+}
+.report-item-content .responsive-table thead tr th {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-right: 30px
+}
+.report-item-content .responsive-table tbody tr {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd
+}
+.report-item-content .responsive-table tbody tr:nth-child(even) {
+  background: #f8f8f8
+}
+.report-item-content .responsive-table tbody tr td {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  padding: 8px 30px 8px 0
+}
+.report-item-download button {
+  background: #0246a4;
+  border: none;
+  padding: 15px 30px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%
+}
+.report-pagination {
+  margin-bottom: 60px
+}
+.report-pagination a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #00499a
+}
+@media (min-width:576px) {
+  .report-item-content h1 {
+    margin-bottom: 30px
+  }
+  .report-item {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px 24px 60px
+  }
+}
+@media (min-width:768px) {
+  .report-item-download {
+    display: flex;
+    justify-content: flex-end
+  }
+  .report-item-download button {
+    width: auto
+  }
+  .report-item-content h1 {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px
+  }
+}
+@media (min-width:992px) {
+  .report-item-content .report-item-content-box {
+    grid-template-columns: repeat(auto-fill,355px)
+  }
+  .report-item {
+    padding: 30px 36px 60px
+  }
+}
+.policy {
+  background: #fff;
+  margin: 0 -15px;
+  padding: 24px 15px
+}
+.policy :first-child {
+  margin-top: 0
+}
+.policy :last-child {
+  margin-bottom: 0
+}
+.policy h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.21;
+  color: #000;
+  margin: 0 0 24px
+}
+.policy h2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+  margin: 0 0 14px
+}
+.policy h2 span {
+  padding-left: 23px;
+  display: inline
+}
+.policy p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 14px 0 18px;
+  color: #000
+}
+.policy a {
+  color: #e30613;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5
+}
+.policy a.mail {
+  color: #0246a4
+}
+.policy ol {
+  margin: 18px 0;
+  counter-reset: num
+}
+.policy ol li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 9px 0;
+  color: #000;
+  position: relative
+}
+.policy ol > li {
+  counter-increment: num
+}
+.policy ol > li::before {
+  content: counter(num) ".";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.21
+}
+.policy ol ol {
+  counter-reset: num2
+}
+.policy ol ol > li {
+  counter-increment: num2
+}
+.policy ol ol > li::before {
+  content: counter(num) "." counter(num2) ".";
+  position: static;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5
+}
+@media (min-width:576px) {
+  .policy {
+    margin: 0;
+    padding-bottom: 30px
+  }
+  .policy h1 {
+    margin-bottom: 30px
+  }
+}
+@media (min-width:768px) {
+  .policy h1 {
+    margin-bottom: 40px
   }
 }

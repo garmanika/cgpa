@@ -38,10 +38,13 @@ $(function () {
       .addClass("current");
   });
 
-
-
-
-
+  $(".tags-item").on("click", function (e) {
+    $(this).toggleClass("active");
+  });
+  $(".subscription-control-email button").on("click", function (e) {
+    $(this).closest('.subscription-wrapper').addClass('fill');
+    $('.subscription-message').addClass('active');
+  });
 
   //$.fancybox.defaults.backFocus = false
   $(window).on("scroll", function () {
@@ -53,30 +56,26 @@ $(function () {
     }
   });
 
-
-
-
-
-  let phoneInputs = $('.add-phone-mask');
+  let phoneInputs = $(".add-phone-mask");
   phoneInputs.each(function (index, el) {
     $(this).inputmask({
       mask: "+7 (999) 999 99 99",
       onBeforePaste: function (pastedValue, opts) {
-        let clearValue = pastedValue.replace(/\D/g, '');
-        if (clearValue.indexOf('89') === 0) {
-          return clearValue.replace('89', '+79');
+        let clearValue = pastedValue.replace(/\D/g, "");
+        if (clearValue.indexOf("89") === 0) {
+          return clearValue.replace("89", "+79");
         }
       },
       showMaskOnHover: false,
-      clearIncomplete: true
+      clearIncomplete: true,
     });
   });
 
   phoneInputs.on("keyup", function (event) {
     let value = $(this).inputmask("unmaskedvalue");
     if (value.length === 2) {
-      if (value.indexOf('89') === 0 || value.indexOf('79') === 0) {
-        $(this).val('9');
+      if (value.indexOf("89") === 0 || value.indexOf("79") === 0) {
+        $(this).val("9");
       }
     }
   });
