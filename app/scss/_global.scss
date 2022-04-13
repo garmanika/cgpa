@@ -1,0 +1,240 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  scrollbar-width: thin;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+button,
+a {
+  cursor: pointer;
+  outline: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.wrapper-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  ul,
+  ol,
+  li {
+    margin: 0;
+  }
+  button,
+  input,
+  textarea {
+    outline: none;
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+ul,
+li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+}
+.content {
+  flex: 1 0 auto;
+  margin-top: 120px;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+.page-inner {
+  padding-bottom: 100px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btn {
+  @include no-button;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #5db3da;
+  border-radius: 333px;
+  padding: 12px 30px;
+  &.small {
+    padding: 4px 16px;
+  }
+  &:hover,
+  &:focus {
+    background: #66bfe8;
+  }
+  &.diseble {
+    background: #b7b7b7;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+.btn-second {
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  color: #333333;
+  border: 1px solid #5db3da;
+  border-radius: 333px;
+  background: #fff;
+  &:hover {
+    background: #f9f9fd;
+  }
+  &.disable {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    border: 1px solid #b7b7b7;
+    text-align: center;
+    text-transform: uppercase;
+    color: #b7b7b7;
+  }
+  &.small {
+    font-weight: bold;
+    padding: 4px 16px;
+    &:hover {
+      background: #66bfe8;
+      color: #fff;
+    }
+    &.disable {
+      border: 1px solid #b7b7b7;
+      color: #b7b7b7;
+    }
+  }
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgba($color: #fff, $alpha: 0.9);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  &:hover {
+    svg path {
+      fill: #5db3da;
+    }
+  }
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+}
+.page-inner {
+  padding-bottom: 100px;
+}
+// .arrow-right{
+//   border: solid #333333;
+//   border-width: 0 2px 2px 0;
+//   display: inline-block;
+//   padding: 3px;
+//   transform: rotate(-45deg);
+//   border-radius: 1px;
+// }
+.section-control {
+  .btn {
+    display: none;
+  }
+}
+.swiper-pagination {
+  width: 100%;
+  bottom: 0;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #eeeeee;
+  &:hover,
+  &:focus {
+    background: #5db3da;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: #5db3da;
+}
+
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .content {
+    margin-top: 48px;
+  }
+  .page-inner {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .section-title {
+    .btn {
+      display: none;
+    }
+  }
+  .section-control {
+    .btn {
+      display: block;
+    }
+  }
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .page-inner {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+}
