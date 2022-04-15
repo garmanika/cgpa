@@ -1,20 +1,36 @@
-@media (min-width: 576px){
-	.policy{
-		margin: 0;
+@media (min-width: 576px) {
+	.page-wrapper {
 		padding-bottom: 30px;
+		margin: 0;
 	}
-	.policy h1{
+	.policy h1 {
 		margin-bottom: 30px;
 	}
-}
-@media (min-width: 768px){
-	.policy h1{
-		margin-bottom: 40px;
+	.policy ol > li + li {
+		margin-top: 30px;
 	}
 }
-@media (min-width: 992px){
-
+@media (min-width: 768px) {
+	.policy h1 {
+		margin-bottom: 40px;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.policy ol > li + li {
+		margin-top: 40px;
+	}
+	.policy h2 {
+		margin-bottom: 28px;
+	}
+	.page-wrapper {
+		padding: 24px 24px 60px 24px;
+	}
 }
-@media (min-width: 1200px){
-
+@media (min-width: 992px) {
+	.page-wrapper {
+		padding: 67px 36px 60px;
+	}
+}
+@media (min-width: 1200px) {
 }
