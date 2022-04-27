@@ -38,7 +38,7 @@ $(function () {
       .addClass("current");
   });
 
-  $(".tags-item").on("click", function (e) {
+  $(".tags-items .btn-small").on("click", function (e) {
     $(this).toggleClass("active");
   });
   $(".subscription-control-email button").on("click", function (e) {

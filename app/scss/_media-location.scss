@@ -12,9 +12,12 @@
     .location-item{
         gap: 25px;
     }
-		.location-control-more{
-			width: 350px;
-		}
+    .location-control{
+        .btn-tr{
+          width: 350px;
+        }
+      }
+
 }
 @media (min-width: 768px) {
     .location-item-img {
