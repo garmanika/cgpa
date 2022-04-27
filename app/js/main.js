@@ -8,34 +8,22 @@ $(function () {
       mobileNav.addClass("active");
       $("body").addClass("no-scroll-mobile");
       $(".header").addClass("open-menu");
-      $(".mobile-navigation-search-inner").addClass("show");
     } else {
       $(".menu-btn").removeClass("active");
       $(".page-bg").removeClass("active");
       mobileNav.removeClass("active");
       $("body").removeClass("no-scroll-mobile");
       $(".header").removeClass("open-menu");
-      $(".mobile-navigation-search-inner").removeClass("show");
-      $(".mobile-navigation-sub-position").removeClass("active current");
     }
   });
 
   let mobileNavParent = $(".mobile-navigation-menu .is-parent > a");
-  let mobileNavBack = $(".mobile-navigation-sub-menu-heading");
   mobileNavParent.on("click", function (e) {
     e.preventDefault();
     let current = $(this).next(".mobile-navigation-sub-position");
-    $(".mobile-navigation-sub-position").scrollTop("0").removeClass("current");
-    current.addClass("active current");
-  });
-  mobileNavBack.on("click", function (e) {
-    e.preventDefault();
-    $(this)
-      .closest(".mobile-navigation-sub-position")
-      .removeClass("active current");
-    $(this)
-      .closest(".mobile-navigation-sub-position.active")
-      .addClass("current");
+    current.toggleClass("active");
+		current.children('.mobile-navigation-sub-menu').slideToggle();
+		current.closest('.is-parent').toggleClass('active');
   });
 
   $(".tags-items .btn-small").on("click", function (e) {

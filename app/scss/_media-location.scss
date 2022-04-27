@@ -6,9 +6,6 @@
     .location-item-img {
         padding-bottom: 82%;
     }
-    .location-item-info-date{
-        margin-bottom: 30px;
-    }
     .location-item{
         gap: 25px;
     }
@@ -32,14 +29,23 @@
 }
 @media (min-width: 992px) {
     .location-item-img {
-        padding-bottom: 82%;
+        height: 100%;
+				width: 100%;
+				padding: 0;
+				img{
+
+				}
     }
     ul.location-item-info-list{
-        padding-bottom: 89px;
+        padding-bottom: 64px;
     }
     .location-item{
         grid-template-columns: 1fr 1fr;
+				gap: 0;
     }
+		ul.location-item-info-tags{
+			left: 40px;
+		}
     .location-item:nth-child(even){
         .location-item-img{
             order: 1;
@@ -57,6 +63,6 @@
 }
 @media (min-width: 1200px) {
     .location-item-img {
-        padding-bottom: 66%;
+        
     }
 }
