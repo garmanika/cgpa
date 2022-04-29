@@ -1,0 +1,72 @@
+@media (min-width: 576px) {
+    .authorization {
+        padding: 50px 0;
+    }
+    .authorization-header {
+        margin-bottom: 40px;
+    }
+    .authorization-form {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 60px 40px;
+        max-width: 500px;
+    }
+    .authorization-header .header-logo {
+        font-size: 52px;
+        line-height: 63px;
+    }
+    .authorization-form-links {
+        bottom: 40px;
+        left: 60px;
+        width: calc(100% - 120px);
+    }
+    .authorization-footer {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .authorization-header {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .authorization-footer-inner {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: 0 60px;
+        gap: 40px;
+    }
+    .footer-descr {
+        grid-column: 1/3;
+    }
+    .web-form-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    .web-form-info {
+        font-size: 22px;
+    }
+    .web-forms-captcha{
+        img{
+            height: 84px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .authorization {
+        padding: 100px 0;
+    }
+    .authorization-header {
+        margin-bottom: 60px;
+    }
+    .authorization-form-links {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    .web-form {
+        padding-bottom: 50px;
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

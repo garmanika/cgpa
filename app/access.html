@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/normalize.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title></title>
+</head>
+
+<body>
+  <div class="container">
+    <section class="authorization">
+      <div class="authorization-header">
+        <div class="header-box">
+          <a href="#" class="header-logo">ЦГПА</a>
+          <div class="header-logo-descr">
+            центр геопространственной аналитики
+          </div>
+        </div>
+      </div>
+      <div class="authorization-form">
+        <form>
+          <div class="authorization-form-wrapper">
+            <div class="authorization-form-title">Запросить доступ</div>
+            <div class="web-form">
+              <div class="web-inputs">
+                <div class="web-input">
+                  <input type="text" disabled placeholder="ФИО*">
+                  <label class="web-input-placeholder">ФИО*</label>
+                </div>
+                <div class="web-input">
+                  <input type="text" placeholder="Компания*">
+                  <label  class="web-input-placeholder">Компания*</label>
+                </div>
+                <div class="web-input">
+                  <input type="text" placeholder="E-mail*">
+                  <label  class="web-input-placeholder">E-mail*</label>
+                </div>
+                <div class="web-input">
+                  <input type="tel" class="add-phone-mask" placeholder="Телефон*">
+                  <label  class="web-input-placeholder">Телефон*</label>
+                </div>
+                <div class="web-text">
+                  <textarea placeholder="Пожалуйста, сообщите цель получения доступа*"></textarea>
+                  <label  class="web-input-placeholder">Пожалуйста, сообщите цель получения доступа*</label>
+                  <span>* Поля обязательные для ввода </span>
+                </div>
+                <div class="web-check">
+                  <label>
+                    <input type="checkbox" class="check-box" checked required="">
+                    <span class="check-style"></span>
+                    <span class="web-check-text">
+                      Я согласен на <a href="#">обработку персональных данных</a>  и с условиями <a href="#">политики конфиденциальности</a>.  
+                      
+                    </span>
+  
+                  </label>
+                </div>
+                <div class="web-check">
+                  <label>
+                    <input type="checkbox" class="check-box" checked required="">
+                    <span class="check-style"></span>
+                    <span class="web-check-text">
+                      Подписаться на информационную рассылку
+                    </span>
+  
+                  </label>
+                </div>
+              </div>
+  
+              <div class="web-btn">
+                <button class="btn">получить доступ</button>
+              </div>
+           
+            </div>
+
+            <div class="authorization-form-links">
+              <a href="#" class="link-simple">Войти</a>
+              <a href="#" class="link-col">Забыли пароль?</a>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="authorization-footer">
+        <div class="authorization-footer-inner">
+          <a href="#" class="footer-icon">
+            <img src="img/svg/roscosmos-logo.svg" alt="">
+          </a>
+          <a href="#" class="footer-icon">
+            <img src="img/terratech.png" alt="">
+          </a>
+          <div class="footer-descr">© АО «ТЕРРА ТЕХ», 2022</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/jquery.inputmask.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

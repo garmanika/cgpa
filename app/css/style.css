@@ -56,30 +56,56 @@ body.no-scroll-mobile {
 .web-input {
   position: relative
 }
-.web-input input {
-  width: 100%;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.21;
-  padding: 16px 49px 16px 22px;
-  color: #000;
-  height: 49px;
-  border: 1px solid #ddd;
-  outline: 0
-}
-.web-input input::placeholder {
+.web-input .web-input-placeholder {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  transform-origin: 0 0;
+  transform: translate3d(0,0,0);
+  transition: .2s;
+  pointer-events: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 121%;
   color: #6a747d
 }
+.web-input input:not(:placeholder-shown) + .web-input-placeholder {
+  color: rgba(0,0,0,.5);
+  transform: translate3d(0,-12px,0) scale(.75)
+}
+.web-input input:focus + .web-input-placeholder {
+  color: #0246a4;
+  transform: translate3d(0,-12px,0) scale(.75)
+}
+.web-input input:disabled + .web-input-placeholder {
+  color: #ddd
+}
+.web-input input {
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  padding: 20px 54px 0 22px;
+  color: #000;
+  height: 54px;
+  border: 1px solid #ddd;
+  outline: 0
+}
+.web-input input::placeholder {
+  color: transparent
+}
 .web-input input:hover {
   border-color: #768ba7
 }
-.web-input input:active {
-  outline: #0246a4 solid 1px
+.web-input input:active,
+.web-input input:focus {
+  border-color: #0246a4
 }
-.web-input button {
+.web-input input:disabled {
+  border: 1px solid #ddd;
+  background-color: transparent
+}
+.web-input .check {
   background: 0 0;
   border: none;
   padding: 0;
@@ -87,18 +113,156 @@ body.no-scroll-mobile {
   position: absolute;
   right: 0;
   top: 0;
-  height: 49px;
-  width: 49px;
+  height: 54px;
+  width: 54px;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer
 }
-.web-input button svg {
+.web-input .check img,
+.web-input .check svg {
   width: 24px;
-  height: 24px
+  height: 24px;
+  object-fit: cover
 }
-.web-input button svg path {
+.web-input .check img path,
+.web-input .check svg path {
   fill: #aaa
+}
+.web-input.correct::after {
+  background-image: url(../img/svg/correct.svg)
+}
+.web-input.uncorrect input {
+  border: 1px solid #e30613
+}
+.web-input.uncorrect::after {
+  background-image: url(../img/svg/uncorrect.svg)
+}
+.web-input.correct::after,
+.web-input.uncorrect::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  bottom: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
+}
+.web-text {
+  position: relative
+}
+.web-text textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 94px;
+  padding: 20px 20px 0;
+  border: 1px solid #ddd;
+  outline: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 121%;
+  color: #000
+}
+.web-text textarea::placeholder {
+  color: transparent
+}
+.web-text textarea:hover {
+  border-color: #768ba7
+}
+.web-text textarea:active,
+.web-text textarea:focus {
+  border-color: #0246a4
+}
+.web-text textarea:disabled {
+  border: 1px solid #ddd;
+  background-color: transparent
+}
+.web-text .web-input-placeholder {
+  max-height: none;
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0,0,0);
+  transition: .2s;
+  pointer-events: none;
+  font-size: 14px;
+  line-height: 121%;
+  color: #6a747d
+}
+.web-text textarea:not(:placeholder-shown) + .web-input-placeholder {
+  color: rgba(0,0,0,.5);
+  transform: translate3d(0,-12px,0) scale(.75);
+  max-height: 16px
+}
+.web-text textarea:disabled + .web-input-placeholder {
+  color: #ddd
+}
+.web-text textarea:focus + .web-input-placeholder {
+  color: #0246a4;
+  transform: translate3d(0,-12px,0) scale(.75);
+  max-height: 16px
+}
+.web-text span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 121%;
+  color: #000;
+  padding-left: 22px
+}
+.web-check label {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  align-items: start;
+  cursor: pointer;
+  position: relative;
+  gap: 8px
+}
+.web-check .check-style {
+  border: 1px solid #aaa;
+  width: 16px;
+  height: 16px
+}
+.web-check .check-style:focus,
+.web-check .check-style:hover {
+  border-color: #0246a4
+}
+.web-check .check-box {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0)
+}
+.web-check .check-box:checked + .check-style {
+  background-image: url(../img/svg/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 10px
+}
+.web-check-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -.011em;
+  color: #6a747d
+}
+.web-check-text a {
+  color: #6a747d;
+  text-decoration: underline
 }
 select::-moz-placeholder {
   opacity: 1
@@ -190,6 +354,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .btn-small:disabled {
   background: #ddd;
+  color: #fff;
   border: 1px solid #ddd
 }
 .link-simple {
@@ -453,7 +618,8 @@ ul.mobile-navigation-sub-menu {
   }
   .header-menu ul > li > a span {
     max-width: 100%;
-    padding: 0
+    padding: 0;
+    position: relative
   }
   body.no-scroll-mobile {
     overflow: auto
@@ -462,7 +628,8 @@ ul.mobile-navigation-sub-menu {
     border: none
   }
   .header-menu ul > li > a {
-    padding: 0
+    padding: 0;
+    color: #000
   }
   .header-menu ul > li > a span.acting {
     position: relative
@@ -474,7 +641,8 @@ ul.mobile-navigation-sub-menu {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #0246a4
+    background-color: #0246a4;
+    opacity: 1
   }
   .header-top {
     padding: 40px 0 27px
@@ -506,6 +674,38 @@ ul.mobile-navigation-sub-menu {
     background: #768ba7;
     color: #fff
   }
+  .header-menu ul > li > a span::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0246a4;
+    opacity: 0
+  }
+  .header-menu ul > li > a:hover span::before {
+    opacity: 1
+  }
+  .header-menu ul > li.active > a {
+    color: #000
+  }
+  .header-menu ul > li.active > a span {
+    position: relative
+  }
+  .header-menu ul > li.active > a span::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0246a4;
+    opacity: 1
+  }
+  .mobile-navigation-sub-position > ul li > a span::before {
+    display: none
+  }
 }
 @media (min-width:992px) {
   .header-logo-icons {
@@ -535,10 +735,25 @@ ul.mobile-navigation-sub-menu {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
-  padding: 15px 56px 15px 22px
+  padding: 15px 56px 15px 22px;
+  outline: 0
 }
 .tags-search input::placeholder {
-  color: #706f6f
+  color: #6a747d
+}
+.tags-search input:hover {
+  border-color: #768ba7
+}
+.tags-search input:active,
+.tags-search input:focus {
+  border-color: #0246a4
+}
+.tags-search input:disabled {
+  border: 1px solid #ddd;
+  background-color: transparent
+}
+.tags-search input:disabled::placeholder {
+  color: #ddd
 }
 .tags-search button {
   position: absolute;
@@ -555,7 +770,7 @@ ul.mobile-navigation-sub-menu {
   justify-content: center
 }
 .tags-items-inner {
-  max-height: 84px;
+  max-height: 85px;
   overflow: hidden;
   margin-bottom: 12px;
   display: inline-block
@@ -624,6 +839,9 @@ ul.mobile-navigation-sub-menu {
 .location {
   margin-bottom: 40px
 }
+.location .location-item-info-box .location-item-info-date {
+  display: none
+}
 .location-items {
   display: grid;
   grid-template-columns: 1fr;
@@ -647,7 +865,8 @@ ul.mobile-navigation-sub-menu {
 .location-item-img {
   position: relative;
   height: 0;
-  padding-bottom: 62.5%
+  padding-bottom: 62.5%;
+  display: block
 }
 .location-item-img img {
   position: absolute;
@@ -657,9 +876,14 @@ ul.mobile-navigation-sub-menu {
   height: 100%;
   object-fit: cover
 }
+.location-item-info-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px 72px
+}
 .location-item-info {
-  position: relative;
-  padding: 0 15px 25px
+  position: relative
 }
 .location-item-info-date {
   font-weight: 500;
@@ -689,9 +913,6 @@ ul.mobile-navigation-sub-menu {
   color: #000;
   margin-bottom: 8px
 }
-ul.location-item-info-list {
-  padding-bottom: 47px
-}
 ul.location-item-info-list li {
   position: relative;
   font-weight: 400;
@@ -707,19 +928,24 @@ ul.location-item-info-list li::before {
   position: absolute;
   content: "";
   width: 3px;
-  height: 4px;
+  height: 3px;
   background-color: #000;
   border-radius: 50%;
   top: 9px;
   left: 8px
 }
-ul.location-item-info-tags {
-  display: inline-flex;
-  gap: 8px 14px;
-  flex-wrap: wrap;
+.location-item-info-box {
   position: absolute;
   bottom: 25px;
   left: 15px
+}
+.location-item-info-box .location-item-info-date {
+  margin: 0
+}
+ul.location-item-info-tags {
+  display: inline-flex;
+  gap: 8px 14px;
+  flex-wrap: wrap
 }
 ul.location-item-info-tags a {
   font-size: 14px
@@ -742,6 +968,13 @@ ul.location-item-info-tags a {
   .location-control .btn-tr {
     width: 350px
   }
+  .location-item-info-link {
+    padding-left: 25px;
+    padding-right: 25px
+  }
+  .location-item-info-box {
+    left: 20px
+  }
 }
 @media (min-width:768px) {
   .location-item-img {
@@ -758,25 +991,73 @@ ul.location-item-info-tags a {
     width: 100%;
     padding: 0
   }
-  ul.location-item-info-list {
-    padding-bottom: 64px
-  }
   .location-item {
     grid-template-columns: 1fr 1fr;
     gap: 0
   }
-  ul.location-item-info-tags {
+  .location-item-info-box {
     left: 40px
   }
   .location-item:nth-child(even) .location-item-img {
     order: 1
   }
-  .location-item-info {
-    padding: 30px 40px 25px
+  .location-item-info-link {
+    padding: 30px 40px 68px
   }
   .location,
   .location-items {
     margin-bottom: 60px
+  }
+  .location-crowded .location-item-info-link {
+    padding: 24px 15px 73px
+  }
+  .location-crowded .location-item-info-date {
+    display: none
+  }
+  .location-crowded .location-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px
+  }
+  .location-crowded .location-item-img {
+    position: relative;
+    height: 0;
+    padding-bottom: 57%
+  }
+  .location-crowded .location-item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+  .location-crowded .location-item:nth-child(even) .location-item-img {
+    order: 0
+  }
+  .location-crowded .location-item {
+    grid-template-columns: 1fr
+  }
+  .location-crowded .location-item-info-box {
+    left: 15px;
+    width: calc(100% - 30px);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between
+  }
+  .location-crowded .location-item-info-box .location-item-info-date {
+    display: block
+  }
+  .location-crowded .location-item-info-title {
+    min-height: 60px
+  }
+  .location-crowded .location-item-info {
+    min-height: 400px;
+    position: static
+  }
+  .location-crowded .location-item {
+    display: block;
+    min-height: 400px;
+    height: 100%
   }
 }
 .subscription {
@@ -809,10 +1090,25 @@ ul.location-item-info-tags a {
   height: 49px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.21
+  line-height: 1.21;
+  outline: 0
 }
 .subscription-control-email input::placeholder {
-  color: #706f6f
+  color: #6a747d
+}
+.subscription-control-email input:hover {
+  border-color: #768ba7
+}
+.subscription-control-email input:active,
+.subscription-control-email input:focus {
+  border-color: #0246a4
+}
+.subscription-control-email input:disabled {
+  border: 1px solid #ddd;
+  background-color: transparent
+}
+.subscription-control-email input:disabled::placeholder {
+  color: #ddd
 }
 .subscription-control-email .btn {
   padding: 14px 0
@@ -880,6 +1176,9 @@ ul.location-item-info-tags a {
   }
 }
 @media (min-width:1200px) {
+  .location-crowded .location-items {
+    grid-template-columns: repeat(3,1fr)
+  }
   .subscription-control-email {
     grid-template-columns: 1fr 170px;
     gap: 16px
@@ -1116,7 +1415,7 @@ ul.location-item-info-tags a {
   position: absolute;
   content: "";
   width: 3px;
-  height: 4px;
+  height: 3px;
   background-color: #000;
   border-radius: 50%;
   top: 9px;
@@ -1256,7 +1555,7 @@ ul.location-item-info-tags a {
   font-size: 25px;
   line-height: 1.21;
   color: #000;
-  margin: 0 0 24px
+  margin: 24px 0
 }
 .policy h2 {
   font-weight: 500;
@@ -1334,7 +1633,7 @@ ul.location-item-info-tags a {
     margin: 0
   }
   .policy h1 {
-    margin-bottom: 30px
+    margin: 30px 0
   }
   .policy ol > li + li {
     margin-top: 30px
@@ -1351,7 +1650,7 @@ ul.location-item-info-tags a {
     margin-top: 40px
   }
   .policy h2 {
-    margin-bottom: 28px
+    margin: 28px 0
   }
   .page-wrapper {
     padding: 24px 24px 60px
@@ -1400,15 +1699,25 @@ ul.location-item-info-tags a {
 .authorization-header {
   margin-bottom: 35px
 }
+.authorization-header .header-logo {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 51px;
+  color: #0246a4
+}
 .authorization-form {
   margin: 0 -15px 40px;
   padding: 20px 15px 35px;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(180,180,180,.2)
+  box-shadow: 0 2px 4px rgba(180,180,180,.2);
+  position: relative;
+  min-height: 442px
 }
 .authorization-form .btn {
-  width: 100%;
-  margin-bottom: 30px
+  width: 100%
+}
+.web-form {
+  padding-bottom: 100px
 }
 .authorization-form-title {
   font-weight: 500;
@@ -1422,7 +1731,11 @@ ul.location-item-info-tags a {
   grid-template-columns: 1fr;
   gap: 30px;
   align-items: center;
-  justify-items: center
+  justify-items: center;
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  width: calc(100% - 30px)
 }
 .authorization-footer-inner {
   display: grid;
@@ -1439,6 +1752,27 @@ ul.location-item-info-tags a {
   line-height: 1.21;
   color: #6a747d
 }
+.web-form-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 121%;
+  margin-bottom: 20px;
+  color: #0246a4
+}
+.web-form-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000
+}
+.web-forms-captcha {
+  margin-bottom: 30px
+}
+.web-forms-captcha img {
+  width: 100%;
+  height: 77px;
+  object-fit: contain
+}
 @media (min-width:576px) {
   .report-list h1 {
     margin: 30px 0
@@ -1448,6 +1782,49 @@ ul.location-item-info-tags a {
   }
   .authorization-header {
     margin-bottom: 40px
+  }
+  .authorization-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 60px 40px;
+    max-width: 500px
+  }
+  .authorization-header .header-logo {
+    font-size: 52px;
+    line-height: 63px
+  }
+  .authorization-form-links {
+    bottom: 40px;
+    left: 60px;
+    width: calc(100% - 120px)
+  }
+  .authorization-footer {
+    max-width: 500px;
+    margin: 0 auto
+  }
+  .authorization-header {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .authorization-footer-inner {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 0 60px;
+    gap: 40px
+  }
+  .footer-descr {
+    grid-column: 1/3
+  }
+  .web-form-title {
+    font-size: 36px;
+    margin-bottom: 40px
+  }
+  .web-form-info {
+    font-size: 22px
+  }
+  .web-forms-captcha img {
+    height: 84px
   }
 }
 @media (min-width:768px) {
@@ -1464,12 +1841,13 @@ ul.location-item-info-tags a {
   .authorization-header {
     margin-bottom: 60px
   }
-}
-.text-page :first-child {
-  margin-top: 0
-}
-.text-page :last-child {
-  margin-bottom: 0
+  .authorization-form-links {
+    grid-template-columns: auto auto;
+    justify-content: space-between
+  }
+  .web-form {
+    padding-bottom: 50px
+  }
 }
 .text-page h1 {
   font-weight: 500;
@@ -1483,7 +1861,14 @@ ul.location-item-info-tags a {
   font-size: 22px;
   line-height: 30px;
   color: #000;
-  margin: 20px 0 14px
+  margin: 20px 0
+}
+.text-page h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  margin: 18px 0
 }
 .text-page img {
   display: block;
@@ -1507,7 +1892,7 @@ ul.location-item-info-tags a {
 .text-page .responsive-table {
   max-width: 100%;
   overflow-x: auto;
-  margin-bottom: 60px
+  margin: 30px 0
 }
 .text-page .responsive-table table {
   width: 100%;
@@ -1567,7 +1952,7 @@ ul.location-item-info-tags a {
   position: absolute;
   content: "";
   width: 3px;
-  height: 4px;
+  height: 3px;
   background-color: #000;
   border-radius: 50%;
   top: 9px;
@@ -1603,6 +1988,12 @@ ul.location-item-info-tags a {
   line-height: 1.5;
   color: #000;
   padding-left: 24px
+}
+.text-page :first-child {
+  margin-top: 0
+}
+.text-page :last-child {
+  margin-bottom: 0
 }
 @media (min-width:768px) {
   .text-page h1 {
