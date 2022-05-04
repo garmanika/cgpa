@@ -1,545 +1,741 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;500&display=swap"
+		rel="stylesheet"
+	/>
 
-    <link rel="stylesheet" href="css/bootstrap-grid.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap-grid.css"/>
+	<link rel="stylesheet" href="css/normalize.css"/>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <title></title>
-  </head>
+	<link rel="stylesheet" href="css/style.css"/>
+	<title></title>
+</head>
 
-  <body>
-    <div class="page-bg"></div>
-    <div class="wrapper-page">
-      <div class="content">
-        <header class="header">
-          <div class="header-wrapper">
-            <div class="header-top">
-              <div class="container">
-                <div class="header-top-inner">
-                  <div class="header-box">
-                    <a href="#" class="header-logo">ЦГПА</a>
-                    <div class="header-logo-descr">
-                      центр геопространственной аналитики
-                    </div>
-                  </div>
-                  <div class="header-box">
-                    <div class="header-logo-icons">
-                      <a href="#" class="header-logo-icon">
-                        <img
-                          src="img/svg/roscosmos-logo.svg"
-                          alt="roscosmos-logo"
-                        />
-                      </a>
-                      <a href="#" class="header-logo-icon">
-                        <img src="img/terratech.png" alt="terratech-logo" />
-                      </a>
-                    </div>
-                    <button class="menu-btn">
-                      <span class="menu-btn-top"></span>
-                      <span class="menu-btn-medium"></span>
-                      <span class="menu-btn-bottom"></span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M5.53033 17.9047C5.23744 17.6118 5.23744 17.137 5.53033 16.8441L16.844 5.53034C17.1369 5.23745 17.6118 5.23745 17.9047 5.53034C18.1976 5.82323 18.1976 6.29811 17.9047 6.591L6.59099 17.9047C6.2981 18.1976 5.82322 18.1976 5.53033 17.9047Z"
-                          fill="black"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M5.53022 5.53033C5.82311 5.23744 6.29798 5.23744 6.59088 5.53033L17.9046 16.844C18.1975 17.1369 18.1975 17.6118 17.9046 17.9047C17.6117 18.1976 17.1368 18.1976 16.8439 17.9047L5.53022 6.59099C5.23732 6.2981 5.23732 5.82322 5.53022 5.53033Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="header-bottom">
-              <div class="container">
-                <div class="header-bottom-inner">
-                  <nav class="header-bottom-nav">
-                    <div class="header-menu">
-                      <div class="mobile-navigation-box">
-                        <ul class="mobile-navigation-menu">
-                          <li>
-                            <a href="#" class="mobile-navigation-menu-link active">
-                              <span class="acting"> Главная </span>
-                            </a>
-                          </li>
-                          <li class="is-parent">
-                            <a class="mobile-navigation-menu-link " href="#"><span>Категории</span> </a>
-                            <div class="mobile-navigation-sub-position">
-															<ul class="mobile-navigation-sub-menu">
-                                <li>
-                                  <a href="#">
-                                    <span>Населенные пункты </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> сельское хозяйство </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> водные ресурсы </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Строительство </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Недропользования </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Чрезвычайные ситуации </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Экология </span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a class="mobile-navigation-menu-link " href="#">
-                              <span> Список отчетов </span>
-                            </a>
-                          </li>
-                          <li class="is-parent">
-                            <a class="mobile-navigation-menu-link " href="#"><span>О проекте</span> </a>
-                            <div class="mobile-navigation-sub-position">
-															<ul class="mobile-navigation-sub-menu">
-                                <li>
-                                  <a href="#">
-                                    <span>Населенные пункты </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> сельское хозяйство </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> водные ресурсы </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Строительство </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Недропользования </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Чрезвычайные ситуации </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span> Экология </span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <main>
-          <section class="tags">
-            <div class="container">
-              <div class="tags-search">
-                <input type="search" placeholder="Поиск" />
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M0.833252 7.00004C0.833252 3.5943 3.59418 0.833374 6.99992 0.833374C10.4057 0.833374 13.1666 3.5943 13.1666 7.00004C13.1666 10.4058 10.4057 13.1667 6.99992 13.1667C3.59418 13.1667 0.833252 10.4058 0.833252 7.00004ZM6.99992 1.83337C4.14646 1.83337 1.83325 4.14658 1.83325 7.00004C1.83325 9.8535 4.14646 12.1667 6.99992 12.1667C9.85338 12.1667 12.1666 9.8535 12.1666 7.00004C12.1666 4.14658 9.85338 1.83337 6.99992 1.83337Z"
-                      fill="#1C1B1E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M4.76072 4.42747C5.33325 3.85498 6.12559 3.5 6.99989 3.5C7.87419 3.5 8.66654 3.85498 9.23904 4.42748C9.43431 4.62274 9.43431 4.93932 9.23904 5.13459C9.04378 5.32985 8.7272 5.32985 8.53194 5.13459C8.13931 4.74196 7.59833 4.5 6.99989 4.5C6.40146 4.5 5.86047 4.74196 5.4678 5.1346C5.27253 5.32985 4.95595 5.32984 4.76069 5.13457C4.56544 4.93931 4.56545 4.62272 4.76072 4.42747Z"
-                      fill="#1C1B1E"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M10.7204 10.7204C10.9157 10.5252 11.2323 10.5252 11.4275 10.7204L14.256 13.5489C14.4512 13.7441 14.4512 14.0607 14.256 14.256C14.0607 14.4512 13.7441 14.4512 13.5489 14.256L10.7204 11.4275C10.5252 11.2323 10.5252 10.9157 10.7204 10.7204Z"
-                      fill="#1C1B1E"
-                    />
-                  </svg>
-                </button>
-              </div>
+<body>
+<div class="page-bg"></div>
+<div class="wrapper-page">
+	<div class="content">
+		<header class="header">
+			<div class="header-wrapper">
+				<div class="header-top">
+					<div class="container">
+						<div class="header-top-inner">
+							<div class="header-box">
+								<a href="#" class="header-logo">ЦГПА</a>
+								<div class="header-logo-descr">
+									центр геопространственной аналитики
+								</div>
+							</div>
+							<div class="header-box">
+								<div class="header-logo-icons">
+									<a href="#" class="header-logo-icon">
+										<img
+											src="img/svg/roscosmos-logo.svg"
+											alt="roscosmos-logo"
+										/>
+									</a>
+									<a href="#" class="header-logo-icon">
+										<img src="img/terratech.png" alt="terratech-logo"/>
+									</a>
+								</div>
+								<button class="menu-btn">
+									<span class="menu-btn-top"></span>
+									<span class="menu-btn-medium"></span>
+									<span class="menu-btn-bottom"></span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M5.53033 17.9047C5.23744 17.6118 5.23744 17.137 5.53033 16.8441L16.844 5.53034C17.1369 5.23745 17.6118 5.23745 17.9047 5.53034C18.1976 5.82323 18.1976 6.29811 17.9047 6.591L6.59099 17.9047C6.2981 18.1976 5.82322 18.1976 5.53033 17.9047Z"
+											fill="black"
+										/>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M5.53022 5.53033C5.82311 5.23744 6.29798 5.23744 6.59088 5.53033L17.9046 16.844C18.1975 17.1369 18.1975 17.6118 17.9046 17.9047C17.6117 18.1976 17.1368 18.1976 16.8439 17.9047L5.53022 6.59099C5.23732 6.2981 5.23732 5.82322 5.53022 5.53033Z"
+											fill="black"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="container">
+						<div class="header-bottom-inner">
+							<nav class="header-bottom-nav">
+								<div class="header-menu">
+									<div class="mobile-navigation-box">
+										<ul class="mobile-navigation-menu">
+											<li>
+												<a href="#" class="mobile-navigation-menu-link active">
+													<span class="acting"> Главная </span>
+												</a>
+											</li>
+											<li class="is-parent">
+												<a class="mobile-navigation-menu-link " href="#"><span>Категории</span>
+												</a>
+												<div class="mobile-navigation-sub-position">
+													<ul class="mobile-navigation-sub-menu">
+														<li>
+															<a href="#">
+																<span>Населенные пункты </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> сельское хозяйство </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> водные ресурсы </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Строительство </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Недропользования </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Чрезвычайные ситуации </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Экология </span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a class="mobile-navigation-menu-link " href="#">
+													<span> Список отчетов </span>
+												</a>
+											</li>
+											<li class="is-parent">
+												<a class="mobile-navigation-menu-link " href="#"><span>О проекте</span>
+												</a>
+												<div class="mobile-navigation-sub-position">
+													<ul class="mobile-navigation-sub-menu">
+														<li>
+															<a href="#">
+																<span>Населенные пункты </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> сельское хозяйство </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> водные ресурсы </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Строительство </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Недропользования </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Чрезвычайные ситуации </span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span> Экология </span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="tags">
+				<div class="container">
+					<div class="tags-search">
+						<input type="text" placeholder="Поиск" autocomplete="off" />
+						<button>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M0.833252 7.00004C0.833252 3.5943 3.59418 0.833374 6.99992 0.833374C10.4057 0.833374 13.1666 3.5943 13.1666 7.00004C13.1666 10.4058 10.4057 13.1667 6.99992 13.1667C3.59418 13.1667 0.833252 10.4058 0.833252 7.00004ZM6.99992 1.83337C4.14646 1.83337 1.83325 4.14658 1.83325 7.00004C1.83325 9.8535 4.14646 12.1667 6.99992 12.1667C9.85338 12.1667 12.1666 9.8535 12.1666 7.00004C12.1666 4.14658 9.85338 1.83337 6.99992 1.83337Z"
+									fill="#1C1B1E"
+								/>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M4.76072 4.42747C5.33325 3.85498 6.12559 3.5 6.99989 3.5C7.87419 3.5 8.66654 3.85498 9.23904 4.42748C9.43431 4.62274 9.43431 4.93932 9.23904 5.13459C9.04378 5.32985 8.7272 5.32985 8.53194 5.13459C8.13931 4.74196 7.59833 4.5 6.99989 4.5C6.40146 4.5 5.86047 4.74196 5.4678 5.1346C5.27253 5.32985 4.95595 5.32984 4.76069 5.13457C4.56544 4.93931 4.56545 4.62272 4.76072 4.42747Z"
+									fill="#1C1B1E"
+								/>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M10.7204 10.7204C10.9157 10.5252 11.2323 10.5252 11.4275 10.7204L14.256 13.5489C14.4512 13.7441 14.4512 14.0607 14.256 14.256C14.0607 14.4512 13.7441 14.4512 13.5489 14.256L10.7204 11.4275C10.5252 11.2323 10.5252 10.9157 10.7204 10.7204Z"
+									fill="#1C1B1E"
+								/>
+							</svg>
+						</button>
+					</div>
 
-              <div class="tags-items-inner">
-                <div class="tags-items">
-                  <button class="btn-small tags-item ">#Города</button>
-                  <button class="btn-small active">#Села</button>
-                  <button class="btn-small">#Леса</button>
-                  <button class="btn-small">#Вода</button>
-                  <button class="btn-small">#Порты</button>
-                  <button class="btn-small active">#Пожары</button>
-                  <button class="btn-small">#ЧС</button>
-                  <button class="btn-small">#Мир</button>
-                  <button class="btn-small">#Недра</button>
-                  <button class="btn-small">#ЕИР</button>
-                  <button class="btn-small">#ТЭК</button>
-                  <button class="btn-small">#Логистика</button>
-                  <button class="btn-small">#Агро</button>
-                  <button class="btn-small">#Стройка</button>
-                  <button class="btn-small">#Цифровая Земля</button>
-                  <button class="btn-small">#Мониторинг</button>
-                  <button class="btn-small">#Арктика</button>
-                  <button class="btn-small">#Эко</button>
-                </div>
-              </div>
-              <button class="tags-all">
-                <span class="tags-all-show">Показать все теги</span>
-                <span class="tags-all-hide">Скрыть теги</span>
-              </button>
-            </div>
-          </section>
-          <section class="location location-crowded">
-            <div class="container">
-              <div class="location-items">
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Карьеры</div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-  
-                  </div>
-                </div>
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index-1.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Очень длинный заголовок в две строки
-                      </div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
+					<div class="tags-items-inner">
+						<div class="tags-items">
+							<button class="btn-small tags-item">#Города</button>
+							<button class="btn-small tags-item">#Села</button>
+							<button class="btn-small tags-item">#Леса</button>
+							<button class="btn-small tags-item">#Вода</button>
+							<button class="btn-small tags-item">#Порты</button>
+							<button class="btn-small tags-item">#Пожары</button>
+							<button class="btn-small tags-item">#ЧС</button>
+							<button class="btn-small tags-item">#Мир</button>
+							<button class="btn-small tags-item">#Недра</button>
+							<button class="btn-small tags-item">#ЕИР</button>
+							<button class="btn-small tags-item">#ТЭК</button>
+							<button class="btn-small tags-item">#Логистика</button>
+							<button class="btn-small tags-item">#Агро</button>
+							<button class="btn-small tags-item">#Стройка</button>
+							<button class="btn-small tags-item">#Цифровая Земля</button>
+							<button class="btn-small tags-item">#Мониторинг</button>
+							<button class="btn-small tags-item">#Арктика</button>
+							<button class="btn-small tags-item">#Эко</button>
+						</div>
+					</div>
+					<button class="tags-all">
+						<span class="tags-all-show">Показать все теги</span>
+						<span class="tags-all-hide">Скрыть теги</span>
+					</button>
+				</div>
+			</section>
+			<section class="location location-crowded">
+				<div class="container">
+					<div class="location-items">
+						<div class="location-item active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Карьеры</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Карьеры</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index-1.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Лесоизменения</div>
+									<div class="location-item-info-descr">
+										Лес - это главное богатсво страны!
+										Его необходимо беречь!
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Леса</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index-2.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Длинный заголовок  в две строки</div>
+									<div class="location-item-info-descr">
+										Несколько слов о проблеме
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Арктика</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index-3.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Сельское хозяйство</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Сельское хозяйство</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index-4.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Длинный заголовок  в две строки</div>
+									<div class="location-item-info-descr">
+										Несколько слов о проблеме
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
 
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index-2.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Карьеры</div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Арктика</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active active-visible">
+							<a href="#" class="location-item-img">
+								<img src="img/index-5.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Карьеры</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
 
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index-3.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Карьеры</div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Недра</a>
+										</li>
+										<li>
+											<a class="link-simple" href="#">#Мониторинг</a>
+										</li>
+										<li>
+											<a class="link-simple" href="#">#ЧС</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item active">
+							<a href="#" class="location-item-img">
+								<img src="img/index.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Карьеры</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Карьеры</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active">
+							<a href="#" class="location-item-img">
+								<img src="img/index-1.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Лесоизменения</div>
+									<div class="location-item-info-descr">
+										Лес - это главное богатсво страны!
+										Его необходимо беречь!
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Леса</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item active">
+							<a href="#" class="location-item-img">
+								<img src="img/index-2.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Длинный заголовок  в две строки</div>
+									<div class="location-item-info-descr">
+										Несколько слов о проблеме
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Арктика</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active">
+							<a href="#" class="location-item-img">
+								<img src="img/index-3.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Сельское хозяйство</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Сельское хозяйство</a>
+										</li>
+										<li>
+											<a class="link-simple" href="#">#Порты</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item active">
+							<a href="#" class="location-item-img">
+								<img src="img/index-4.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Длинный заголовок  в две строки</div>
+									<div class="location-item-info-descr">
+										Несколько слов о проблеме
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
 
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index-4.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Карьеры</div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Арктика</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+						<div class="location-item even active">
+							<a href="#" class="location-item-img">
+								<img src="img/index-5.jpg" alt=""/>
+							</a>
+							<div class="location-item-info">
+								<a href="#" class="location-item-info-link">
+									<div class="location-item-info-date">01.04.2022</div>
+									<div class="location-item-info-title">Карьеры</div>
+									<div class="location-item-info-descr">
+										Исходная ситуация - соблюдение правил недропользования и
+										незаконные карьеры.
+									</div>
+									<div class="location-item-info-subtitle">Задачи</div>
+									<ul class="location-item-info-list">
+										<li>Выявление незаконных карьеров</li>
+										<li>
+											Установление нарушений лицензионных соглашений для
+											разрешенных карьеров
+										</li>
+									</ul>
+								</a>
 
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="location-item">
-                  <a href="#" class="location-item-img">
-                    <img src="img/index-5.jpg" alt="" />
-                  </a>
-                  <div class="location-item-info">
-                    <a href="#" class="location-item-info-link">
-                      <div class="location-item-info-date">01.04.2022</div>
-                      <div class="location-item-info-title">Карьеры</div>
-                      <div class="location-item-info-descr">
-                        Исходная ситуация - соблюдение правил недропользования и
-                        незаконные карьеры.
-                      </div>
-                      <div class="location-item-info-subtitle">Задачи</div>
-                      <ul class="location-item-info-list">
-                        <li>Выявление незаконных карьеров</li>
-                        <li>
-                          Установление нарушений лицензионных соглашений для
-                          разрешенных карьеров
-                        </li>
-                      </ul>
-                    </a>
+								<div class="location-item-info-box">
+									<ul class="location-item-info-tags">
+										<li>
+											<a class="link-simple" href="#">#Недра</a>
+										</li>
+										<li>
+											<a class="link-simple" href="#">#Мониторинг</a>
+										</li>
+										<li>
+											<a class="link-simple" href="#">#ЧС</a>
+										</li>
+									</ul>
+									<div class="location-item-info-date">01.04.2022</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="location-control">
+						<button class="btn-tr">показать еще</button>
+					</div>
+				</div>
+			</section>
+			<section class="subscription">
+				<div class="container">
+					<div class="subscription-wrapper">
+						<div class="subscription-title">
+							Хотите быть в курсе актуальной информации?
+						</div>
+						<div class="subscription-control">
+							<div class="subscription-control-email">
+								<input type="email" placeholder="E-mail"/>
+								<button class="btn">подписаться</button>
+							</div>
+						</div>
+					</div>
+					<div class="subscription-message">
+						Вы успешно подписались на нашу рассылку!
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-inner">
+				<div class="footer-links">
+					<div class="footer-link-box footer-link-tels">
+						<a href="tel:+ 74957455957" class="footer-link"
+						>+ 7 (495) 745-59-57</a
+						>
+					</div>
+					<div class="footer-link-box footer-link-mails">
+						<a href="mailto:info@terratech.ru">info@terratech.ru</a>
+					</div>
+				</div>
 
-                    <div class="location-item-info-box">
-                      <ul class="location-item-info-tags">
-                        <li>
-                          <a class="link-simple" href="#">#Недра</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#Мониторинг</a>
-                        </li>
-                        <li>
-                          <a class="link-simple" href="#">#ЧС</a>
-                        </li>
-                      </ul>
-                      <div class="location-item-info-date">01.04.2022</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="location-control">
-                <button class="btn-tr">показать еще</button>
-              </div>
-            </div>
-          </section>
-          <section class="subscription">
-            <div class="container">
-              <div class="subscription-wrapper">
-                <div class="subscription-title">
-                  Хотите быть в курсе актуальной информации?
-                </div>
-                <div class="subscription-control">
-                  <div class="subscription-control-email">
-                    <input type="email" placeholder="E-mail" />
-                    <button class="btn">подписаться</button>
-                  </div>
-                </div>
-              </div>
-              <div class="subscription-message">
-                Вы успешно подписались на нашу рассылку!
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-inner">
-            <div class="footer-links">
-              <div class="footer-link-box footer-link-tels">
-                <a href="tel:+ 74957455957" class="footer-link"
-                  >+ 7 (495) 745-59-57</a
-                >
-              </div>
-              <div class="footer-link-box footer-link-mails">
-                <a href="mailto:info@terratech.ru">info@terratech.ru</a>
-              </div>
-            </div>
+				<div class="footer-icons-inner">
+					<a href="#" class="footer-icon">
+						<img src="img/svg/roscosmos-logo.svg" alt=""/>
+					</a>
+					<a href="#" class="footer-icon">
+						<img src="img/terratech.png" alt=""/>
+					</a>
+					<div class="footer-icon-info">
+						Организация Госкорпорации «Роскосмос»
+					</div>
+				</div>
+				<div class="footer-info">© АО «ТЕРРА ТЕХ», 2022</div>
+			</div>
+		</div>
+	</footer>
+</div>
 
-            <div class="footer-icons-inner">
-              <a href="#" class="footer-icon">
-                <img src="img/svg/roscosmos-logo.svg" alt="" />
-              </a>
-              <a href="#" class="footer-icon">
-                <img src="img/terratech.png" alt="" />
-              </a>
-              <div class="footer-icon-info">
-                Организация Госкорпорации «Роскосмос»
-              </div>
-            </div>
-            <div class="footer-info">© АО «ТЕРРА ТЕХ», 2022</div>
-          </div>
-        </div>
-      </footer>
-    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.inputmask.js"></script>
+<script src="js/main.js"></script>
 
-    <script src="js/jquery.min.js"></script>
+<script>
+	$(function() {
+		const stepCount = 6;
+		let showCount = stepCount;
+		let activeLocations = $('.location-item.active');
 
-    <script src="js/jquery.inputmask.js"></script>
+		$('.tags-item').on("click", function (e) {
+			e.preventDefault();
+			$(this).toggleClass('active');
+			locationsByTags();
+			activeLocations = $('.location-item.active');
+			locationsSearch(activeLocations);
+			locationsShowActive(showCount);
+		});
 
-    <script src="js/main.js"></script>
-  </body>
+		$('.location-item-info-tags a').on('click', function(e) {
+			e.preventDefault();
+			let tagText = $(this).text();
+			let tagButton = $('.tags-items .tags-item').filter(function() {
+				return $(this).text() === tagText;
+			});
+			tagButton.click();
+		});
+
+		$('.location-control .btn-tr').on('click', function(e) {
+			e.preventDefault();
+			showCount = showCount + stepCount;
+			locationsShowActive(showCount);
+		});
+
+		$('.tags-search input').on('input change paste', function() {
+			locationsSearch(activeLocations);
+			locationsShowActive(showCount);
+		});
+	});
+</script>
+
+</body>
 </html>
